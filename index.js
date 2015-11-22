@@ -19,9 +19,9 @@ io.on('connection', function(socket){
     io.emit('notifyUser', user);
   });
 });
- 
+var port =Number(process.env.PORT || 3000);
 // Listen application request on port 3000
-http.listen(3000, function(){
+http.listen(port, function(){
   console.log('listening on *:3000');
 });
 
